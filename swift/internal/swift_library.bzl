@@ -295,6 +295,9 @@ dependent for linking, but artifacts/flags required for compilation (such as
 """,
             ),
         },
+        {
+            "eric_info": "HELLO"
+        }
     ),
     doc = """\
 Compiles and links Swift code into a static library and Swift module.
