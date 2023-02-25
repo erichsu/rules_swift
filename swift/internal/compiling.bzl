@@ -2161,7 +2161,7 @@ def compile(
         developer_dirs = swift_toolchain.developer_dirs,
         genfiles_dir = feature_configuration._genfiles_dir,
         is_swift = True,
-        is_test = is_test,
+        is_test = False,
         module_name = module_name,
         objc_include_paths_workaround = (
             merged_providers.objc_include_paths_workaround
