@@ -180,7 +180,7 @@ def _swift_library_impl(ctx):
         deps = deps,
         feature_configuration = feature_configuration,
         generated_header_name = generated_header_name,
-        is_test = ctx.attr.testonly,
+        is_test = True, #ctx.attr.testonly,
         module_name = module_name,
         private_deps = private_deps,
         srcs = srcs,
@@ -196,7 +196,7 @@ def _swift_library_impl(ctx):
             alwayslink = ctx.attr.alwayslink,
             compilation_outputs = cc_compilation_outputs,
             feature_configuration = feature_configuration,
-            is_test = ctx.attr.testonly,
+            is_test = True, #ctx.attr.testonly,
             label = ctx.label,
             linking_contexts = [
                 dep[CcInfo].linking_context
@@ -270,7 +270,7 @@ def _swift_library_impl(ctx):
         alwayslink = ctx.attr.alwayslink,
         deps = deps + private_deps,
         feature_configuration = feature_configuration,
-        is_test = ctx.attr.testonly,
+        is_test = True, #ctx.attr.testonly,
         module_context = module_context,
         libraries_to_link = [linking_output.library_to_link],
         user_link_flags = linkopts,
